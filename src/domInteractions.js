@@ -12,3 +12,14 @@ export const mapListToDomElements = (listOfvalue, attribute) => {
 
     return _viewElems;
 }
+
+
+export const createDOMElem = (tagNmae, className, innerText, src) => {
+    const tag = document.createElement(tagNmae);
+    tag.classList = className;
+
+    if (innerText) tag.innerText = innerText;
+    if (src) tag.src = src;
+
+    return tag;
+}
